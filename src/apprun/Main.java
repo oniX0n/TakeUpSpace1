@@ -3,7 +3,7 @@ package apprun;
 import gui.GuiValueSelector;
 
 public class Main {
-    static GuiValueSelector guiValueSelector;
+    private static GuiValueSelector guiValueSelector;
     public static void main(String[] args) {
         guiValueSelector = new GuiValueSelector();
     }

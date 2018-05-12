@@ -7,7 +7,7 @@ import java.io.File;
 
 
 public class GuiValueSelector {
-    private JButton buttonConfrim;
+    private JButton buttonConfirm;
     private JPanel panelMain;
     private JPanel panelValueSelector;
     private JButton buttonSelectFile;
@@ -34,7 +34,7 @@ public class GuiValueSelector {
         buttonSelectFile.addActionListener(e -> selectFile());
         buttonSelectPath.addActionListener(e -> selectPath());
         buttonNumber.addActionListener(e -> selectNumber());
-        buttonConfrim.addActionListener(e -> confirmValues());
+        buttonConfirm.addActionListener(e -> confirmValues());
 
         frameMain = new JFrame("Value selector");
         frameMain.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
