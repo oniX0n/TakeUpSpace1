@@ -59,7 +59,7 @@ public class GuiValueSelector {
         try{
             int inputNumber = Integer.parseInt(textFieldSelectNumber.getText());
         } catch (Exception e){
-
+            JOptionPane.showMessageDialog(null, "Illegal input!");
         }
     }
 
