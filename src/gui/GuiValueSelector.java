@@ -1,5 +1,7 @@
 package gui;
 
+import apprun.Main;
+
 import javax.swing.*;
 import java.io.File;
 
@@ -16,8 +18,6 @@ public class GuiValueSelector {
     private JTextField textFieldSelectNumber;
 
     private JFrame frameMain;
-
-    private boolean finished = false;
 
     private File fileToCopy = null;
     private String pathWhereToCopy = null;
@@ -91,13 +91,9 @@ public class GuiValueSelector {
             JOptionPane.showMessageDialog(null, "Select all values first!");
         }
         else {
-            finished = true;
+            Main.afterGui();
             frameMain.dispose();
         }
-    }
-
-    public boolean isFinished() {
-        return finished;
     }
 
     public File getFileToCopy() {

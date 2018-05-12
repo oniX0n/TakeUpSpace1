@@ -3,7 +3,13 @@ package apprun;
 import gui.GuiValueSelector;
 
 public class Main {
+    static GuiValueSelector guiValueSelector;
     public static void main(String[] args) {
-        GuiValueSelector guiValueSelector = new GuiValueSelector();
+        guiValueSelector = new GuiValueSelector();
+    }
+    public static void afterGui(){
+        System.out.println(guiValueSelector.getFileToCopy());
+        System.out.println(guiValueSelector.getNumberOfCopies());
+        System.out.println(guiValueSelector.getPathWhereToCopy());
     }
 }
