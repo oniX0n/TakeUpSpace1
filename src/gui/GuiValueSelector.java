@@ -51,7 +51,8 @@ public class GuiValueSelector {
     }
 
     private void selectPath(){
-
+        pathWhereToCopy = fileChooserPath();
+        textFieldSelectedPath.setText(pathWhereToCopy);
     }
 
     private void selectNumber(){
@@ -93,7 +94,7 @@ public class GuiValueSelector {
         jFC.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
         int returnValue = jFC.showOpenDialog(null);
         if(returnValue == JFileChooser.APPROVE_OPTION){
-            return jFC.getCurrentDirectory().getAbsolutePath();
+            return jFC.getSelectedFile().getAbsolutePath();
         }
         return null;
     }
