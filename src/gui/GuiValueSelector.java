@@ -56,7 +56,11 @@ public class GuiValueSelector {
     }
 
     private void selectNumber(){
+        try{
+            int inputNumber = Integer.parseInt(textFieldSelectNumber.getText());
+        } catch (Exception e){
 
+        }
     }
 
     private void confirmValues(){
