@@ -23,29 +23,25 @@ public class GuiValueSelector {
             e.printStackTrace();
         }
 
-        buttonSelectFile.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        buttonSelectFile.addActionListener(e -> selectFile());
+        buttonSelectPath.addActionListener(e -> selectPath());
+        buttonNumber.addActionListener(e -> selectNumber());
+        buttonConfrim.addActionListener(e -> confirmValues());
+    }
 
-            }
-        });
-        buttonSelectPath.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+    private void selectFile(){
 
-            }
-        });
-        buttonNumber.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+    }
 
-            }
-        });
-        buttonConfrim.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+    private void selectPath(){
 
-            }
-        });
+    }
+
+    private void selectNumber(){
+
+    }
+
+    private void confirmValues(){
+
     }
 }
