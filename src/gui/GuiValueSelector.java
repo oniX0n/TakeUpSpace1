@@ -19,9 +19,9 @@ public class GuiValueSelector {
 
     private boolean finished = false;
 
-    private File fileToCopy;
-    private String pathWhereToCopy;
-    private int numberOfCopies;
+    private File fileToCopy = null;
+    private String pathWhereToCopy = null;
+    private int numberOfCopies = 0;
 
     public GuiValueSelector() {
 
@@ -56,7 +56,7 @@ public class GuiValueSelector {
     }
 
     private void confirmValues(){
-
+        System.out.println(fileToCopy+ "---" + pathWhereToCopy + "---" + Integer.toString(numberOfCopies));
     }
 
     public boolean isFinished() {
