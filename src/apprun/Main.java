@@ -16,5 +16,6 @@ public class Main {
                 guiValueSelector.getPathWhereToCopy(),
                 guiValueSelector.getNumberOfCopies()
         );
+        repeatingCopier.copy();
     }
 }
