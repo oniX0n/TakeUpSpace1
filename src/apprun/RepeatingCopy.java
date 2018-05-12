@@ -24,7 +24,7 @@ class RepeatingCopy {
                             + "\\"
                             + (sourceFile.getName().substring(0, sourceFile.getName().indexOf(".")))
                             + Integer.toString(i)
-                            + ".txt"
+                            + (sourceFile.getName().substring(sourceFile.getName().indexOf("."), sourceFile.getName().length()))
             );
             FileUtility.copyFile(sourceFile, destinationFile);
         }
