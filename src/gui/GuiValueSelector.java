@@ -74,4 +74,24 @@ public class GuiValueSelector {
     public String getPathWhereToCopy() {
         return pathWhereToCopy;
     }
+
+    private File fileChooserFile(){
+        JFileChooser jFC = new JFileChooser();
+        jFC.setFileSelectionMode(JFileChooser.FILES_ONLY);
+        int returnValue = jFC.showOpenDialog(null);
+        if(returnValue == JFileChooser.APPROVE_OPTION){
+            return jFC.getSelectedFile();
+        }
+        return null;
+    }
+
+    private String fileChooserPath(){
+        JFileChooser jFC = new JFileChooser();
+        jFC.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        int returnValue = jFC.showOpenDialog(null);
+        if(returnValue == JFileChooser.APPROVE_OPTION){
+            return jFC.getCurrentDirectory().getAbsolutePath();
+        }
+        return null;
+    }
 }
