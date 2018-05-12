@@ -1,6 +1,7 @@
 package gui;
 
 import javax.swing.*;
+import java.io.File;
 
 
 public class GuiValueSelector {
@@ -15,6 +16,12 @@ public class GuiValueSelector {
     private JTextField textFieldSelectNumber;
 
     private JFrame frameMain;
+
+    private boolean finished = false;
+
+    private File fileToCopy;
+    private String pathWhereToCopy;
+    private int numberOfCopies;
 
     public GuiValueSelector() {
 
@@ -50,5 +57,21 @@ public class GuiValueSelector {
 
     private void confirmValues(){
 
+    }
+
+    public boolean isFinished() {
+        return finished;
+    }
+
+    public File getFileToCopy() {
+        return fileToCopy;
+    }
+
+    public int getNumberOfCopies() {
+        return numberOfCopies;
+    }
+
+    public String getPathWhereToCopy() {
+        return pathWhereToCopy;
     }
 }
