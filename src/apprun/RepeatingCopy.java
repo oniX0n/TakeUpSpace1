@@ -1,5 +1,7 @@
 package apprun;
 
+import utils.FileUtility;
+
 import java.io.File;
 
 class RepeatingCopy {
@@ -24,6 +26,7 @@ class RepeatingCopy {
                             + Integer.toString(i)
                             + ".txt"
             );
+            FileUtility.copyFile(sourceFile, destinationFile);
         }
     }
 }
