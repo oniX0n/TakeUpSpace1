@@ -84,6 +84,7 @@ public class GuiValueSelector {
         }
         return null;
     }
+
     private String fileChooserPath(){
         JFileChooser jFC = new JFileChooser();
         jFC.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
