@@ -6,6 +6,7 @@ public class Main {
     private static GuiValueSelector guiValueSelector;
 
     public static void main(String[] args) {
+        System.out.println("Penis");
         guiValueSelector = new GuiValueSelector();
     }
 
