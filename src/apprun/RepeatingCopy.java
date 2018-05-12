@@ -12,4 +12,18 @@ class RepeatingCopy {
         destinationPath = destinationPathInput;
         number = numberInput;
     }
+
+    void copy(){
+        File destinationFile;
+
+        for (int i = 0; i < number; i++){
+            destinationFile = new File(
+                    destinationPath
+                            + "\\"
+                            + (sourceFile.getName().substring(0, sourceFile.getName().indexOf(".")))
+                            + Integer.toString(i)
+                            + ".txt"
+            );
+        }
+    }
 }
