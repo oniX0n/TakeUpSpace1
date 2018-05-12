@@ -44,7 +44,10 @@ public class GuiValueSelector {
     }
 
     private void selectFile(){
-
+        fileToCopy = fileChooserFile();
+        if(!(fileToCopy == null)){
+            textFieldSelectedFile.setText(fileToCopy.getAbsolutePath());
+        }
     }
 
     private void selectPath(){
