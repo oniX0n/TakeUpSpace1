@@ -56,10 +56,30 @@ public class GuiValueSelector {
     }
 
     private void selectNumber(){
+        if(!textFieldSelectNumber.isEditable()){
+            textFieldSelectNumber.setText(null);
+            textFieldSelectNumber.setEditable(true);
+            buttonNumber.setText("Set");
+            numberOfCopies = 0;
+            return;
+        }
+
         try{
             int inputNumber = Integer.parseInt(textFieldSelectNumber.getText());
+
+            if(inputNumber < 1){
+                JOptionPane.showMessageDialog(null, "Input must be greater than 0!");
+                textFieldSelectNumber.setText(null);
+            }
+            else {
+                numberOfCopies = inputNumber;
+                textFieldSelectNumber.setEditable(false);
+                buttonNumber.setText("Edit");
+            }
+
         } catch (Exception e){
             JOptionPane.showMessageDialog(null, "Illegal input!");
+            textFieldSelectNumber.setText(null);
         }
     }
 
