@@ -87,7 +87,6 @@ public class GuiValueSelector {
     }
 
     private void confirmValues(){
-        System.out.println(fileToCopy+ "---" + pathWhereToCopy + "---" + Integer.toString(numberOfCopies));
         if((fileToCopy == null) || (pathWhereToCopy == null) || (numberOfCopies == 0)){
             JOptionPane.showMessageDialog(null, "Select all values first!");
         }
