@@ -32,7 +32,7 @@ public class GuiValueSelector {
 
         frameMain = new JFrame("Select values");
         frameMain.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frameMain.setSize(200, 500);
+        frameMain.setSize(500, 200);
         frameMain.add(panelMain);
         frameMain.setVisible(true);
     }
