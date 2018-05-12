@@ -14,6 +14,8 @@ public class GuiValueSelector {
     private JTextField textFieldSelectedPath;
     private JTextField textFieldSelectNumber;
 
+    private JFrame frameMain;
+
     public GuiValueSelector() {
 
         try {
@@ -26,6 +28,12 @@ public class GuiValueSelector {
         buttonSelectPath.addActionListener(e -> selectPath());
         buttonNumber.addActionListener(e -> selectNumber());
         buttonConfrim.addActionListener(e -> confirmValues());
+
+        frameMain = new JFrame("Value selector");
+        frameMain.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frameMain.setSize(500, 200);
+        frameMain.add(panelMain);
+        frameMain.setVisible(true);
     }
 
     private void selectFile(){
