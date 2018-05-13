@@ -4,6 +4,7 @@ import apprun.Main;
 
 import javax.swing.*;
 import java.io.File;
+import java.text.DecimalFormat;
 
 
 public class GuiValueSelector {
@@ -136,7 +137,8 @@ public class GuiValueSelector {
 
     private void displaySpace(){
         try {
-            textFieldStorageConsumed.setText((fileToCopy.length() * numberOfCopies) + "B");
+            DecimalFormat formatter = new DecimalFormat("#,###");
+            textFieldStorageConsumed.setText((formatter.format(fileToCopy.length() * numberOfCopies)) + "B");
         } catch (NullPointerException e){
             textFieldStorageConsumed.setText("0B");
         }
