@@ -48,15 +48,18 @@ public class GuiValueSelector {
         fileToCopy = fileChooserFile();
         if(!(fileToCopy == null)){
             textFieldSelectedFile.setText(fileToCopy.getAbsolutePath());
+            displaySpace();
         }
         else {
             textFieldSelectedFile.setText(null);
+            displaySpace();
         }
     }
 
     private void selectPath(){
         pathWhereToCopy = fileChooserPath();
         textFieldSelectedPath.setText(pathWhereToCopy);
+        displaySpace();
     }
 
     private void selectNumber(){
@@ -79,6 +82,7 @@ public class GuiValueSelector {
                 numberOfCopies = inputNumber;
                 textFieldSelectNumber.setEditable(false);
                 buttonNumber.setText("Edit");
+                displaySpace();
             }
 
         } catch (Exception e){
@@ -127,5 +131,13 @@ public class GuiValueSelector {
             return jFC.getSelectedFile().getAbsolutePath();
         }
         return null;
+    }
+
+    private void displaySpace(){
+        try {
+            textFieldStorageConsumed.setText((fileToCopy.length() * numberOfCopies) + "B");
+        } catch (NullPointerException e){
+            textFieldStorageConsumed.setText("0B");
+        }
     }
 }
