@@ -68,6 +68,7 @@ public class GuiValueSelector {
             textFieldSelectNumber.setEditable(true);
             buttonNumber.setText("Set");
             numberOfCopies = 0;
+            displaySpace();
             return;
         }
 
