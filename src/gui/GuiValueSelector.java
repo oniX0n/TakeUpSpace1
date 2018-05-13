@@ -4,6 +4,7 @@ import apprun.Main;
 
 import javax.swing.*;
 import java.io.File;
+import java.text.DecimalFormat;
 
 
 public class GuiValueSelector {
@@ -16,6 +17,7 @@ public class GuiValueSelector {
     private JTextField textFieldSelectedFile;
     private JTextField textFieldSelectedPath;
     private JTextField textFieldSelectNumber;
+    private JTextField textFieldStorageConsumed;
 
     private JFrame frameMain;
 
@@ -47,15 +49,18 @@ public class GuiValueSelector {
         fileToCopy = fileChooserFile();
         if(!(fileToCopy == null)){
             textFieldSelectedFile.setText(fileToCopy.getAbsolutePath());
+            displaySpace();
         }
         else {
             textFieldSelectedFile.setText(null);
+            displaySpace();
         }
     }
 
     private void selectPath(){
         pathWhereToCopy = fileChooserPath();
         textFieldSelectedPath.setText(pathWhereToCopy);
+        displaySpace();
     }
 
     private void selectNumber(){
@@ -64,6 +69,7 @@ public class GuiValueSelector {
             textFieldSelectNumber.setEditable(true);
             buttonNumber.setText("Set");
             numberOfCopies = 0;
+            displaySpace();
             return;
         }
 
@@ -78,6 +84,7 @@ public class GuiValueSelector {
                 numberOfCopies = inputNumber;
                 textFieldSelectNumber.setEditable(false);
                 buttonNumber.setText("Edit");
+                displaySpace();
             }
 
         } catch (Exception e){
@@ -126,5 +133,14 @@ public class GuiValueSelector {
             return jFC.getSelectedFile().getAbsolutePath();
         }
         return null;
+    }
+
+    private void displaySpace(){
+        try {
+            DecimalFormat formatter = new DecimalFormat("#,###");
+            textFieldStorageConsumed.setText((formatter.format(fileToCopy.length() * numberOfCopies)) + "B");
+        } catch (NullPointerException e){
+            textFieldStorageConsumed.setText("0B");
+        }
     }
 }
