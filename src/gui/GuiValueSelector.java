@@ -16,6 +16,7 @@ public class GuiValueSelector {
     private JTextField textFieldSelectedFile;
     private JTextField textFieldSelectedPath;
     private JTextField textFieldSelectNumber;
+    private JTextField textFieldStorageConsumed;
 
     private JFrame frameMain;
 
